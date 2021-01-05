@@ -1,3 +1,13 @@
+
+def answer_user():
+    answer = input('Do you wont continue? (y / n)\n')
+
+    if answer == 'y' or answer == 'Y':
+        return True
+    else:
+        return False
+
+
 print('This is a simple colculator programm\n')
 print('\t\tHelp:\n')
 print('\tPress "+"to addition')
@@ -17,18 +27,19 @@ while flag:
     if simbol == '+':
         print(first_number + second_number)
 
-        answer = input('Do you wont continue? (y / n)\n')
-        
-        if answer == 'y' or answer == 'Y':
+        user_answer = answer_user()
+
+        if user_answer:
             continue
         else:
             flag = False
+        
     if simbol == '-':
         print(first_number - second_number)
         
-        answer = input('Do you wont continue? (y / n)\n')
-        
-        if answer == 'y' or answer == 'Y':
+        user_answer = answer_user()
+
+        if user_answer:
             continue
         else:
             flag = False
@@ -36,9 +47,9 @@ while flag:
     if simbol == '*':
         print(first_number * second_number)
         
-        answer = input('Do you wont continue? (y / n)\n')
-        
-        if answer == 'y' or answer == 'Y':
+        user_answer = answer_user()
+
+        if user_answer:
             continue
         else:
             flag = False
@@ -47,9 +58,9 @@ while flag:
         if second_number != 0:
             print(first_number / second_number)
 
-            answer = input('Do you wont continue? (y / n)\n')
-        
-            if answer == 'y' or answer == 'Y':
+            user_answer = answer_user()
+
+            if user_answer:
                 continue
             else:
                 flag = False
@@ -57,9 +68,9 @@ while flag:
         else:
             print('Division by zero!!!')
 
-            answer = input('Do you wont continue? (y / n)\n')
-        
-            if answer == 'y' or answer == 'Y':
+            user_answer = answer_user()
+
+            if user_answer:
                 continue
             else:
                 flag = False
